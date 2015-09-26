@@ -1,0 +1,41 @@
+/* Gloabal */
+
+body{
+	background-color: #004c99;
+}
+
+.container{
+	margin-left: 10%;
+	margin-right: 10%;
+	border: 1px solid gray;
+	padding: 5px 50px 5px 50px;
+	background-color: white;
+}
+
+table, td{
+	border: 1px solid black;
+}
+
+img{
+	float: left;
+	width: 30%;
+	height: 30%;
+	margin-right: 30px;
+}
+
+
+.advantages h4{
+	margin-bottom: 0px;
+}
+
+h1{
+	font-style: italic;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	color:#990099;
+}
