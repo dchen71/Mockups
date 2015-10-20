@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/about.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,31 +21,65 @@
     <![endif]-->
 </head>
 <body>
+    <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Ristorante Con Fusion</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+                    <li><a href="aboutus.html"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                         Menu <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="menu-appetizers.html">Appetizers</a></li>
+                            <li><a href="menu-main.html">Main Courses</a></li>
+                            <li><a href="menu-desserts.html">Desserts</a></li>
+                            <li><a href="menu-drinks.html">Drinks</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Specials</li>
+                            <li><a href="buffet.html">Lunch Buffet</a></li>
+                            <li><a href="brunch.html">Weekend Brunch</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>  
 
-    <header>
+    <header class="jumbotron" id="main-jumbo">
 
         <!-- Main component for a primary marketing message or call to action -->
 
-        <div>
-            <div>
-                <div>
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-xs-12 col-sm-8">
                     <h1>Ristorante con Fusion</h1>
                     <p style="padding:40px;"></p>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div>
+                <div class="col-xs-12 col-sm-4">
                 </div>
             </div>
         </div>
     </header>
 
-    <div>
-        <div>
-            <div>
+    <div class="container">
+        <div class="row-content">
+            <div class="col-xs-12 col-sm-3">
                 <p style="padding:20px;"></p>
                 <h3 align=center>Our Lipsmacking Culinary Creations</h3>
             </div>
-            <div>
+            <div class="col-xs-12 col-sm-9">
                 <h2>Uthappizza</h2>
                 <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                 <p><a  href="#">More &raquo;</a></p>
@@ -53,24 +87,24 @@
         </div>
 
 
-        <div>
-            <div>
+        <div class="row-content">
+            <div class="col-xs-12 col-sm-3">
                 <p style="padding:20px;"></p>
                 <h3 align=center>This Month's Promotions</h3>
             </div>
-            <div>
+            <div class="col-xs-12 col-sm-9">
                 <h2>Weekend Grand Buffet</h2>
                 <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                 <p><a href="#">More &raquo;</a></p>
             </div>
         </div>
 
-        <div>
-            <div>
+        <div class="row-content">
+            <div class="col-xs-12 col-sm-3">
                 <p style="padding:20px;"></p>
                 <h3 align=center>Meet our Culinary Specialists</h3>
             </div>
-            <div>
+            <div class="col-xs-12 col-sm-9">
                 <h2>Alberto Somayya</h2>
                 <h4>Executive Chef</h4>
                 <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
@@ -87,8 +121,8 @@
                     <ul class="list-unstyled">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="aboutus.html">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-6 col-sm-5">
