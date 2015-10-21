@@ -3,6 +3,10 @@ body{
     z-index:0;
 }
 
+#remember{
+	color:white;
+}
+
 /* navbar */
 
 .navbar-inverse {
