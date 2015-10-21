@@ -85,7 +85,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding:40px"></p>
-                    <a href="#" class="btn btn-warning">Reserve Table</a>
+                    <a href="#reserve" class="btn btn-warning btn-block">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -136,7 +136,6 @@
                         </a>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -166,7 +165,64 @@
                 </div>
             </div>
         </div>
+        
+        <div class="row-content" id="reserve">
+            <div class="col-xs-12 col-sm-3">
+                <p style="padding:20px;"></p>
+                <h3 align=center>Reserve a Table</h3>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label">Number of Guests</label>
+                        <label class="radio-inline">
+                          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 4
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> 5
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6" checked> 6
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="datetime" class="control-label col-sm-2">Date and Time</label>
+                        
+                        <div class="col-xs-6 col-sm-5 col-md-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></div>
+                            </div>   
+                        </div>
+                        <div class="col-xs-6 col-sm-5 col-md-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-time"></span></div>
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-info">Reserve</button>
+                    </div>
+                </form>
+                <p style="padding: 20px"></p>
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <strong>Warning:</strong> Please <a href="+852 1234 5678">Call</a> us to reserve for more than six guests.
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <footer class="row-footer">
         <div class="container">
