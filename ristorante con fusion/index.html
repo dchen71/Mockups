@@ -264,8 +264,8 @@
                     <h3 align=center>Reserve a Table</h3>
                     <form class="form-horizontal">
                         <div class="form-group has-error">
-                            <label class="control-label col-sm-2">Number of Guests</label>
-                            <div class="col-xs-6 col-sm-5 col-md-6">
+                            <label class="control-label col-sm-3">Number of Guests</label>
+                            <div class="col-xs-9 col-sm-5 col-md-6">
                                 <label class="radio-inline">
                                   <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
                                 </label>
@@ -286,9 +286,18 @@
                                 </label>
                             </div>
                         </div>
+                        <div class="btn-group col-xs-6 col-sm-5 col-md-12" data-toggle="buttons">
+                          <label type="text" class="col-sm-2">Section</label>
+                          <label class="btn btn-success col-xs-12 col-sm-6 col-md-3 active">
+                            <input type="radio" name="options" id="nonsmoke" autocomplete="off" checked>Non-Smoking
+                          </label>
+                          <label class="btn btn-danger col-xs-12 col-sm-6 col-md-3">
+                            <input type="radio" name="options" id="smoke" autocomplete="off">Smoking
+                          </label>
+                          <p style="padding:20px;"></p>
+                        </div>
                         <div class="form-group">
                             <label for="datetime" class="control-label col-sm-2">Date and Time</label>
-                            
                             <div class="col-xs-6 col-sm-5 col-md-4">
                                 <div class="input-group has-feedback">
                                     <input type="text" class="form-control" id="date" name="date" placeholder="Date" value="10/01/15">
