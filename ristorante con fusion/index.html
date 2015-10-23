@@ -85,7 +85,9 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding:40px"></p>
-                    <a href="#reserve" class="btn btn-warning btn-block">Reserve Table</a>
+                    <a type="button" class="btn btn-warning btn-block"
+                     data-toggle="tooltip" title="Or Call us at +852 12345678"
+                      data-placement="bottom" href="#reserve">Reserve</a>
                 </div>
             </div>
         </div>
@@ -206,7 +208,7 @@
                             </div>   
                         </div>
                         <div class="col-xs-6 col-sm-5 col-md-4">
-                            <div class="input-group">
+                            <div class="input-group has-feedback">
                                 <input type="text" class="form-control" id="time" name="time" placeholder="Time" value="1500">
                                 <div class="input-group-addon"><span class="glyphicon glyphicon-time"></span></div>
                             </div>                        
@@ -273,6 +275,12 @@
     <script src="js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <script>
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+         });
+    </script>
 
 </body>
 
