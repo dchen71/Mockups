@@ -54,7 +54,7 @@
                     <li><a href="contactus.html">Contact</a></li>
                 </ul>
                  <ul class="nav navbar-nav navbar-right">
-                    <li><a data-toggle="modal" data-target="#loginModal">
+                    <li><a onclick=loginModal()>
                     <span class="glyphicon glyphicon-log-in"></span> Login</a>
                     </li>
                 </ul>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding:40px"></p>
-                    <a data-toggle="modal" class="btn btn-warning btn-block" data-target="#reserveModal">Reserve</a>
+                    <a class="btn btn-warning btn-block" onclick=reserveModal()>Reserve</a>
                 </div>
             </div>
         </div>
@@ -392,6 +392,15 @@
                         $("#carousel-play").click(function(){
                 $("#mycarousel").carousel('cycle');
             });
+
+            //Manually loads the reservation modal
+            reserveModal = function(){
+                $('#reserveModal').modal('toggle');
+            };
+            //Manually loads the login modal
+            loginModal = function(){
+                $('#loginModal').modal('toggle');
+            }
         });
     </script>
 
