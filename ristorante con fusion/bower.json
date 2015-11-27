@@ -1,9 +1,6 @@
 {
   "name": "conFusion",
-  "homepage": "https://github.com/dchen71/Mockups",
-  "authors": [
-    "Dan"
-  ],
+  "version": "1.0.0",
   "description": "Website for an awesome restaurant",
   "main": "index.html",
   "moduleType": [],
@@ -12,7 +9,11 @@
     "Fusion",
     "Restaurant"
   ],
+  "authors": [
+    "Jogesh Muppala"
+  ],
   "license": "MIT",
+  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -21,7 +22,8 @@
     "tests"
   ],
   "dependencies": {
+    "bootstrap": "~3.3.5",
     "font-awesome": "~4.4.0",
-    "bootstrap": "~3.3.5"
+    "angular": "~1.4.7"
   }
 }
