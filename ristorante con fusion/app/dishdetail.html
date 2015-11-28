@@ -43,7 +43,7 @@
                 <blockquote class="col-md-12 col-xs-12 col-sm-12">
                   <div class="pull-left">
                     <p>{{ comment.comment }}</p>
-                    <footer>{{ comment.author}} {{ comment.date}}</footer> 
+                    <footer>{{ comment.author}} {{ comment.date | date: format: timezone}}</footer> 
                   </div>
                   <p class="pull-right"><span class="badge">{{ comment.rating}}<span></p>
                 </blockquote>
