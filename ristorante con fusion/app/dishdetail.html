@@ -39,7 +39,22 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs-9 col-xs-offset-1" ng-repeat = "comment in dishCtrl.dish.comments">
+            <div class="col-xs-9 col-xs-offset-1">
+              <h3>Filter text</h3>
+              <div class="form-group col-xs-4">
+                <label for="author">Author:</label>
+                <input type="text" id="author" class="form-control">
+              </div>
+              <div class="form-group col-xs-4">
+                <label for="date">Date:</label>
+                <input type="text" id="date" class="form-control">
+              </div>
+              <div class="form-group col-xs-4">
+                <label for="rating">Rating:</label>
+                <input type="text" id="rating" class="form-control">
+              </div>
+            </div>
+            <div class="col-xs-9 col-xs-offset-1" ng-repeat = "comment in dishCtrl.dish.comments | orderBy: dishCtrl.filtText">
                 <blockquote class="col-md-12 col-xs-12 col-sm-12">
                   <div class="pull-left">
                     <p>{{ comment.comment }}</p>
@@ -103,6 +118,7 @@
             
             this.dish = dish;
             
+            this.filtText = "";
         });
 
     </script>
