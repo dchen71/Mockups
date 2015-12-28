@@ -39,7 +39,7 @@ angular.module('confusionApp', [])
                            category: 'dessert',
                            label:'',
                            price:'2.99',
-                           description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
+                          description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
                            comment: ''
                         }
                         ]; 
@@ -66,4 +66,13 @@ angular.module('confusionApp', [])
             $scope.toggleDetails = function() {
                 $scope.showDetails = !$scope.showDetails;
             };
+        }]);
+        .controller('ContactController', ['$scope', function($scope) {
+
+            $scope.feedback = {mychannel:"", firstName:"", lastName:"",
+                               agree:false, email:"" };
+        }])
+
+        .controller('FeedbackController', ['$scope', function($scope) {
+
         }]);
