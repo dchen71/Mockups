@@ -177,6 +177,7 @@ angular.module('confusionApp', [])
                 $scope.comment.rating = "";
                 $scope.comment.author = "";
                 $scope.comment.date = "";
+				$scope.feedbackForm.$setPristine();
             }
         }])
 
