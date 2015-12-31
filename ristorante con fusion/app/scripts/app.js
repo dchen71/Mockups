@@ -66,7 +66,7 @@ angular.module('confusionApp', [])
             $scope.toggleDetails = function() {
                 $scope.showDetails = !$scope.showDetails;
             };
-        }]);
+        }])
         .controller('ContactController', ['$scope', function($scope) {
             $scope.feedback = {mychannel:"", firstName:"", lastName:"", agree:false, email:"" };
                         var channels = [{value:"tel", label:"Tel."}, {value:"Email",label:"Email"}];
