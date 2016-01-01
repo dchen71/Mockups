@@ -155,13 +155,7 @@ angular.module('confusionApp', [])
         .controller('DishCommentController', ['$scope', function($scope) {
             
             //Step 1: Create a JavaScript object to hold the comment from the form
-            $scope.comment = {
-            	author: "",
-            	rating: 5,
-            	author: "",
-            	comment: "",
-            	date: ""
-            }
+            $scope.comment = {rating: 5, comment: "", author: "", date: "", show: false};
             
             //If any of those change then comment box shows
             $scope.show = function(){
@@ -179,7 +173,6 @@ angular.module('confusionApp', [])
                 //"The date property of your JavaScript object holding the comment" = new Date().toISOString();
                 $scope.comment.date = new Date().toISOString();
                 // Step 3: Push your comment into the dish's comment array
-            	console.log($scope.comment);
                 $scope.dish.comments.push($scope.comment);
                 
                 //Step 4: reset your form to pristine
@@ -187,11 +180,7 @@ angular.module('confusionApp', [])
                 
             	console.log($scope.dish.comments);
                 //Step 5: reset your JavaScript object that holds your comment
-                $scope.comment.author = "";
-                $scope.comment.rating = 5;
-                $scope.comment.author = "";
-                $scope.comment.date = "";
-                $scope.comment.comment = "";
+                $scope.comment = {rating: 5, comment: "", author: "", date: ""};
             }
         }])
 
