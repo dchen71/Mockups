@@ -157,7 +157,7 @@ angular.module('confusionApp', [])
             //Step 1: Create a JavaScript object to hold the comment from the form
             $scope.comment = {
             	name: "",
-            	rating: "",
+            	rating: 5,
             	author: "",
             	text: "",
             	date: ""
