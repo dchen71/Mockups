@@ -95,7 +95,7 @@
                     <div class="form-group" ng-class="{ 'has-error' : commentForm.comment.$error.required && !commentForm.comment.$pristine }">
                         <label for="feedback" class="col-sm-2 control-label">Your comment</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" rows="12" ng-model="comment.comment" required></textarea>
+                            <textarea class="form-control" rows="12" ng-model="comment.comment" name="comment" required></textarea>
                             <span ng-show="commentForm.comment.$error.required && !commentForm.comment.$pristine" class="help-block">Comments are required</span>
                         </div>
                     </div> 
