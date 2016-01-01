@@ -59,26 +59,26 @@
             </div>
         </div>
 
-		<div class="row row-content">
-            <div class="col-xs-12 col-sm-3">
-             <blockquote class="col-md-12 col-xs-12 col-sm-12">
-               <div class="pull-left">
-                 <p>{{ feedback.comment }}</p>
-                 <footer>{{ feedback.author}} {{ feedback.date | date: format: timezone}}</footer> 
-               </div>
-               <p class="pull-right"><span class="badge">{{ feedback.rating}}<span></p>
-             </blockquote>
-           </div>
+		<div class="row row-content" ng-controller="DishCommentController">
+			 <div class="col-xs-12 col-sm-3">
+			  <blockquote class="col-md-12 col-xs-12 col-sm-12">
+			    <div class="pull-left">
+			      <p>{{ comment.text }}</p>
+			      <footer>{{ comment.name}} {{ comment.date | date: format: timezone}}</footer> 
+			    </div>
+			    <p class="pull-right"><span class="badge">{{ comment.rating}}<span></p>
+			  </blockquote>
+			</div>
            <div class="col-xs-12">
               <h3>Post new Comment</h3> 
            </div>
-            <div class="col-xs-12 col-sm-9" ng-controller="DishCommentController">       
-                <form class="form-horizontal" name="feedbackForm" ng-submit="sendFeedback()" novalidate>
+            <div class="col-xs-12 col-sm-9">       
+                <form class="form-horizontal" name="feedbackForm" ng-submit="submitComment()" novalidate>
                     <div class="form-group" ng-class="{ 'has-error' : feedbackForm.name.$error.required && !feedbackForm.name.$pristine }">
-                        <label for="firstname" class="col-sm-2 control-label">Name</label>
+                        <label for="name" class="col-sm-2 control-label">Name</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="name" name="name" placeholder="Enter a name"
-                        ng-model="feedback.firstName" required>
+                        ng-model="comment.name" required>
                             <span ng-show="feedbackForm.name.$error.required && !feedbackForm.name.$pristine" class="help-block">Your name is required.</span>
                         </div>          
                     </div>
@@ -96,8 +96,8 @@
                         <label for="feedback" class="col-sm-2 control-label">Your comment</label>
                         <div class="col-sm-10">
                             <textarea class="form-control" rows="12"
-                                ng-model="feedback.comment" required>   
-                                <span ng-show="feedbackForm.comment.$error.required && !feedbackForm.comment.$pristine" class="help-block">Comments are required</span>
+                                ng-model="feedback.text" required>   
+                                <span ng-show="feedbackForm.text.$error.required && !feedbackForm.text.$pristine" class="help-block">Comments are required</span>
                             </textarea>
                         </div>
                     </div> 
