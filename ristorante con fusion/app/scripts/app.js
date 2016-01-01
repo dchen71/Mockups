@@ -163,6 +163,17 @@ angular.module('confusionApp', [])
             	date: ""
             }
             
+            //If any of those change then comment box shows
+            $scope.show = function(){
+            	if($scope.comment.rating != 5 || $scope.comment.author != "" || $scope.comment.comment != ""){
+            		return true;
+            	}
+            	else{
+            		console.log($scope.comment);
+            		return false;
+            	}
+            } 
+
             $scope.submitComment = function () {
                 
 
