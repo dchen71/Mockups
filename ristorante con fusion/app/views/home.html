@@ -6,18 +6,16 @@
                 <h3 align=center>Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class="col-xs-12 col-sm-9 col-sm-pull-3">
-				<ul class="media-list">
-                     <li class="media">
-                         <div class="media-left">
-                             <img ng-src="{{dish.image}}">
-                         </div>
-                         <div class="media-body">
-                             <h4 class="media-heading">{{dish.name}} <em>{{dish.label}}</em></h4>
-                             <p>{{dish.description}}</p>
-                             <p>{{dish.price}}</p>
-                         </div>
-                     </li>
-                </ul>
+				<div class="media">
+                  <div class="media-left">
+                    <a href=""><img src="{{dish.image}}" class="media-object"></a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">{{ dish.name}}<span class="label label-danger">{{ dish.label }}</span></h4>
+                    <p>{{dish.price}}</p>
+                    <p>{{dish.description}}</p>
+                  </div>
+                </div>
             </div>
         </div>
 
@@ -28,18 +26,16 @@
                 <h3 align=center>This Month's Promotions</h3>
             </div>
             <div class="col-xs-12 col-sm-9">
-				<ul class="media-list">
-                     <li class="media">
-                         <div class="media-left">
-                             <img ng-src="{{promotion.image}}">
-                         </div>
-                         <div class="media-body">
-                             <h4 class="media-heading">{{promotion.name}} <em>{{promotion.label}}</em></h4>
-                             <p>{{promotion.description}}</p>
-                             <p>{{promotion.price}}</p>
-                         </div>
-                     </li>
-                </ul>
+				<div class="media">
+                  <div class="media-left">
+                    <a href=""><img src="{{promotion.image}}" class="media-object"></a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">{{ promotion.name}}<span class="label label-danger">{{ promotion.label }}</span></h4>
+                    <p>{{promotion.price}}</p>
+                    <p>{{promotion.description}}</p>
+                  </div>
+                </div>
             </div>
         </div>
 

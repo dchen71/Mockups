@@ -93,8 +93,9 @@ angular.module('confusionApp')
             $scope.dish = menuFactory.getDish(0);
         }])
 
-        .controller('AboutController', ['$scope', function($scope) {
-            $scope.leaders = getLeaders();
+        .controller('AboutController', ['$scope', 'corporateFactory', function($scope, corporateFactory) {
+            $scope.leaders = corporateFactory.getLeaders();
+            console.log($scope.leaders);
         }])
 
 ;
