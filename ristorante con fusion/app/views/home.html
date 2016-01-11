@@ -11,8 +11,7 @@
                     <a href=""><img ng-src="{{dish.image}}" class="media-object"></a>
                   </div>
                   <div class="media-body">
-                    <h4 class="media-heading">{{ dish.name}}<span class="label label-danger">{{ dish.label }}</span></h4>
-                    <p>{{dish.price}}</p>
+                    <h4 class="media-heading">{{ dish.name}}<span class="label label-danger">{{ dish.label }}</span><span class="badge">{{dish.price | currency}}</span></h2></h4>
                     <p>{{dish.description}}</p>
                   </div>
                 </div>
@@ -31,8 +30,7 @@
                     <a href=""><img ng-src="{{promotion.image}}" class="media-object"></a>
                   </div>
                   <div class="media-body">
-                    <h4 class="media-heading">{{ promotion.name}}<span class="label label-danger">{{ promotion.label }}</span></h4>
-                    <p>{{promotion.price}}</p>
+                    <h4 class="media-heading">{{ promotion.name}}<span class="label label-danger">{{ promotion.label }}</span><span class="badge">{{promotion.price | currency}}</span></h2></h4>
                     <p>{{promotion.description}}</p>
                   </div>
                 </div>
