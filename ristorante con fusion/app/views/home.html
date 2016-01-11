@@ -6,7 +6,18 @@
                 <h3 align=center>Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class="col-xs-12 col-sm-9 col-sm-pull-3">
-				<h4>Implement the Featured Dish Here</h4>
+				<ul class="media-list">
+                     <li class="media">
+                         <div class="media-left">
+                             <img ng-src="{{promotion.image}}">
+                         </div>
+                         <div class="media-body">
+                             <h4 class="media-heading">{{promotion.name}} <em>{{promotion.label}}</em></h4>
+                             <p>{{promotion.description}}</p>
+                             <p>{{promotion.price}}</p>
+                         </div>
+                     </li>
+                </ul>
             </div>
         </div>
 
