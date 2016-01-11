@@ -88,14 +88,14 @@ angular.module('confusionApp')
         }])
 
         // implement the IndexController and About Controller here
-        .controller('IndexController', ['$scope', 'menuFactory', function($scope, menuFactory) {
+        .controller('IndexController', ['$scope', 'menuFactory', 'corporateFactory', function($scope, menuFactory, corporateFactory) {
             $scope.promotion = menuFactory.getPromotion(0);
             $scope.dish = menuFactory.getDish(0);
+            $scope.leader = corporateFactory.getLeader(0);
         }])
 
         .controller('AboutController', ['$scope', 'corporateFactory', function($scope, corporateFactory) {
             $scope.leaders = corporateFactory.getLeaders();
-            console.log($scope.leaders);
         }])
 
 ;
