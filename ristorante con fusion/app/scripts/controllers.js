@@ -79,11 +79,16 @@ angular.module('confusionApp')
 
         .controller('DishDetailController', ['$scope', '$stateParams', 'menuFactory', function($scope, $stateParams, menuFactory) {
             $scope.dish = {};
-                menuFactory.getDish(parseInt($stateParams.id,10))
+            $scope.showDish = false;
+            $scope.message="Loading ...";
+            menuFactory.getDish(parseInt($stateParams.id,10))
             .then(
                 function(response){
                     $scope.dish = response.data;
                     $scope.showDish=true;
+                },
+                function(response) {
+                    $scope.message = "Error: "+response.status + " " + response.statusText;
                 }
             );
             
@@ -110,12 +115,17 @@ angular.module('confusionApp')
             $scope.promotion = menuFactory.getPromotion(0);
             $scope.leader = corporateFactory.getLeader(0);
             $scope.dish = {};
+            $scope.showDish = false;
+            $scope.message="Loading ...";
 
             menuFactory.getDish(0)
             .then(
                 function(response){
                     $scope.dish = response.data;
                     $scope.showDish = true;
+                },
+                function(response) {
+                    $scope.message = "Error: "+response.status + " " + response.statusText;
                 }
             );
         }])
