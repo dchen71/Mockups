@@ -7,10 +7,11 @@ angular.module('confusionApp')
             $scope.showDetails = false;
 
             $scope.dishes= [];
+
             $scope.showMenu = false;
             $scope.message = "Loading ...";
-                        $scope.dishes= {};
-                        menuFactory.getDishes()
+            $scope.dishes= {};
+            menuFactory.getDishes()
             .then(
                 function(response) {
                     $scope.dishes = response.data;
@@ -63,7 +64,7 @@ angular.module('confusionApp')
                 
                 console.log($scope.feedback);
                 
-                if ($scope.feedback.agree && ($scope.feedback.mychannel == "")) {
+                if ($scope.feedback.agree && ($scope.feedback.mychannel === "")) {
                     $scope.invalidChannelSelection = true;
                     console.log('incorrect');
                 }
@@ -107,7 +108,7 @@ angular.module('confusionApp')
                 $scope.commentForm.$setPristine();
                 
                 $scope.comment = {rating:5, comment:"", author:"", date:""};
-            }
+            };
         }])
 
         // implement the IndexController and About Controller here

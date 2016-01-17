@@ -34,7 +34,7 @@ gulp.task('usemin',['jshint'], function () {
   return gulp.src('./app/**/*.html')
       .pipe(usemin({
         css:[minifycss(),rev()],
-        js: [ngannotate(),uglify(),rev()]
+        js: [uglify(),rev()]
       }))
       .pipe(gulp.dest('dist/'));
 });
