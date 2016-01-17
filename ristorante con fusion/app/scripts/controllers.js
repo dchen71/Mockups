@@ -119,7 +119,19 @@ angular.module('confusionApp')
                     $scope.message = "Error: "+response.status + " " + response.statusText;
                 }
             );
-            $scope.leader = corporateFactory.getLeader(0);
+            
+            $scope.showLeader = false;
+            $scope.leader = corporateFactory.getLeaders().get({id:0})
+            .$promise.then(
+                function(response){
+                    $scope.leader = response;
+                    $scope.showLeader = true;
+                },
+                function(response) {
+                    $scope.message = "Error: "+response.status + " " + response.statusText;
+                }
+            );
+            
             $scope.dish = {};
             $scope.showDish = false;
             $scope.message="Loading ...";
@@ -136,7 +148,17 @@ angular.module('confusionApp')
         }])
 
         .controller('AboutController', ['$scope', 'corporateFactory', function($scope, corporateFactory) {
-            $scope.leaders = corporateFactory.getLeaders();
+            $scope.showLeader = false;
+            $scope.leaders = corporateFactory.getLeaders().query()
+            .$promise.then(
+                function(response){
+                    $scope.leaders = response;
+                    $scope.showLeader = true;
+                },
+                function(response) {
+                    $scope.message = "Error: "+response.status + " " + response.statusText;
+                }
+            );
         }])
 
 ;

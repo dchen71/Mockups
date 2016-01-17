@@ -6,7 +6,10 @@
                 <h3 align=center>Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class="col-xs-12 col-sm-9 col-sm-pull-3">
-				<div class="media">
+                <div ng-if="!showDish">
+                    <h3>{{message}}</h3>
+                </div>
+				<div class="media" ng-if="showDish">
                   <div class="media-left">
                     <a href=""><img ng-src="{{dish.image}}" class="media-object"></a>
                   </div>
@@ -46,10 +49,10 @@
                 <h3 align=center>Meet our Culinary Specialists</h3>
             </div>
             <div class="col-xs-12 col-sm-9 col-sm-pull-3">
-                <div ng-if="!showDish">
+                <div ng-if="!showLeader">
                     <h3>{{message}}</h3>
                 </div>
-                <div class="media" ng-if="showDish">
+                <div class="media" ng-if="showLeader">
                   <li class="media">
                         <div class="media-left">
                             <img ng-src="{{leader.image}}">
