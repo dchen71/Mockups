@@ -29,4 +29,14 @@ angular.module('confusionApp')
     
         }])
 
+        .factory('feedbackFactory', ['$resource', 'baseURL', function($resource,baseURL) {
+          var feedbacks = {};
+
+          feedbacks.getFeedbacks = function(){
+            return $resource(baseURL+"feedback/:id",null,  {'update':{method:'PUT' }});
+          }
+
+          return feedbacks;
+        }]);
+
 ;

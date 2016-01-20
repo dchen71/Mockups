@@ -56,11 +56,16 @@ angular.module('confusionApp')
                         
         }])
 
-        .controller('FeedbackController', ['$scope', function($scope) {
+        .controller('FeedbackController', ['$scope', 'feedbackFactory', function($scope, feedbackFactory) {
+
+            $scope.feedbacks = feedbackFactory.getFeedbacks().query();
+
             $scope.sendFeedback = function() {
                 
                 console.log($scope.feedback);
                 
+                $scope.feedbacks.push($scope.feedback);
+
                 if ($scope.feedback.agree && ($scope.feedback.mychannel === "")) {
                     $scope.invalidChannelSelection = true;
                     console.log('incorrect');
@@ -95,6 +100,9 @@ angular.module('confusionApp')
         .controller('DishCommentController', ['$scope', 'menuFactory', function($scope,menuFactory) {
             $scope.comment = {rating:5, comment:"", author:"", date:""};
             
+            console.log($scope.comment.rating.$pristine);
+
+
             $scope.submitComment = function () {
                 $scope.comment.date = new Date().toISOString();
                 console.log($scope.comment);

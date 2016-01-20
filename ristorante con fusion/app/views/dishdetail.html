@@ -38,7 +38,7 @@
         </div>
 
 		<div class="row row-content" ng-controller="DishCommentController">
-			 <div class="col-xs-12 col-sm-3" ng-show="show()">
+			 <div class="col-xs-12 col-sm-3" ng-if="commentForm.$dirty">
 			  <blockquote class="col-md-12 col-xs-12 col-sm-12">
 			    <div class="pull-left">
 			      <p>{{ comment.comment }}</p>
