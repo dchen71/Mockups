@@ -64,7 +64,7 @@ angular.module('confusionApp')
                 
                 console.log($scope.feedback);
                 
-                $scope.feedbacks.push($scope.feedback);
+                feedbackFactory.getFeedbacks().create($scope.feedback);
 
                 if ($scope.feedback.agree && ($scope.feedback.mychannel === "")) {
                     $scope.invalidChannelSelection = true;
@@ -77,6 +77,7 @@ angular.module('confusionApp')
                     $scope.feedbackForm.$setPristine();
                     console.log($scope.feedback);
                 }
+                console.log($scope.feedbacks);
             };
         }])
 
